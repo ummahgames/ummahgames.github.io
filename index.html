@@ -1,134 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ummah Games - Islamic Themed Arcade</title>
-    <meta name="description" content="Experience classic arcade games with beautiful Islamic themes and motifs. Play Snake, Tetris, Memory Match, and Puzzle games with Islamic cultural elements.">
-    <meta name="keywords" content="Islamic games, arcade games, Muslim games, educational games, Islamic culture, Islamic art">
-    <meta name="author" content="Ummah Games">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Ummah Games - Islamic Themed Arcade">
-    <meta property="og:description" content="Experience classic arcade games with beautiful Islamic themes and motifs.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ummahgames.com">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f2">
+  <title>Ummah Games — Little games, big smiles</title>
+  <meta name="description" content="A happy little home for free browser games. Explore, discover, aim, and play six games made by parents for their children. No ads. No accounts. Just play.">
+  <link rel="canonical" href="https://ummahgames.com/">
+  <meta property="og:title" content="Ummah Games — Little games, big smiles">
+  <meta property="og:description" content="Six little adventures, made for the joy of playing. Free browser games, with no ads or accounts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ummahgames.com/">
+  <link rel="icon" type="image/svg+xml" href="images/art/brand.svg">
+  <link rel="alternate icon" type="image/png" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-brand">
-                <h1>Ummah Games</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="games-grid">
-            <div class="games-header">
-                <h2>100% Free • No Ads • No Login Required • Child-Friendly</h2>
-                <p class="games-subtitle">Made by parents for their children</p>
-            </div>
-            <div class="games-container">
-                <div class="game-card">
-                    <div class="game-image">
-                        <img src="images/dune.png" alt="Dune Arcanum" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdhbWUgSW1hZ2U8L3RleHQ+Cjwvc3ZnPgo='">
-                    </div>
-                    <div class="game-info">
-                        <h3>Dune Arcanum</h3>
-                        <p>An epic adventure in the desert sands</p>
-                        <div class="game-buttons">
-                            <a href="http://ummahgames.com/dune-arcanum/" target="_blank" class="btn btn-primary">Play Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <div class="game-image">
-                        <img src="images/scrolls.png" alt="Scrolls" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdhbWUgSW1hZ2U8L3RleHQ+Cjwvc3ZnPgo='">
-                    </div>
-                    <div class="game-info">
-                        <h3>Scrolls</h3>
-                        <p>Discover ancient wisdom through mystical scrolls</p>
-                        <div class="game-buttons">
-                            <a href="http://ummahgames.com/scrolls/" target="_blank" class="btn btn-primary">Play Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <div class="game-image">
-                        <img src="images/pearls.png" alt="Pearls of the Gulf" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdhbWUgSW1hZ2U8L3RleHQ+Cjwvc3ZnPgo='">
-                    </div>
-                    <div class="game-info">
-                        <h3>Pearls of the Gulf</h3>
-                        <p>Gather the pearls and avoid the mines</p>
-                        <div class="game-buttons">
-                            <a href="http://ummahgames.com/pearls/" target="_blank" class="btn btn-primary">Play Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="contact-link">
-                            <a href="https://github.com/ummahgames" target="_blank">GitHub</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ummah Games. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Game Modal -->
-    <div id="gameModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="gameContainer"></div>
-        </div>
-    </div>
-
-    <!-- Game Details Modal -->
-    <div id="detailsModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="detailsContainer"></div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <a class="skip-link" href="#games">Skip to games</a>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Ummah Games home"><img src="images/art/brand.svg" width="44" height="44" alt=""><span>ummah<span class="brand-light">games</span><span class="brand-dot">.</span></span></a>
+      <div class="nav-links"><a href="#games">The games</a><a href="#about">Our little story</a></div>
+      <a class="nav-play" href="#games">Let’s play <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> LITTLE GAMES, BIG SMILES</p>
+        <h1 id="hero-title">A little play.<br>A lot of <span class="joy">joy<svg viewBox="0 0 150 18" aria-hidden="true"><path d="M5 12 Q73 0 145 10"/></svg></span>.</h1>
+        <p class="hero-description">A happy little corner of the internet.<br>Six adventures to explore, discover, and enjoy.<br>Made with love. Open to everyone.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#games">Find your next adventure <span aria-hidden="true">↗</span></a><a class="surprise-link" id="surprise-link" href="/find-the-animal/">Surprise me <span aria-hidden="true">✧</span></a></div>
+        <p class="parent-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8c0 5-8 10-8 10S4 13 4 8a4 4 0 0 1 8-1 4 4 0 0 1 8 1Z"/></svg> Made by parents, for their children. And yours.</p>
+      </div>
+      <div class="hero-art">
+        <span class="art-spark spark-one" aria-hidden="true">✦</span>
+        <img class="oasis" src="images/art/oasis.svg" alt="A playful little oasis with a palm tree, a sailboat, a friendly alien, and colorful game tiles." width="620" height="510" fetchpriority="high">
+        <div class="art-caption"><span aria-hidden="true">✦</span> Little worlds. Big adventures.</div><span class="art-spark spark-two" aria-hidden="true">✧</span>
+      </div>
+    </section>
+    <div class="promise-strip"><ul class="container promises" aria-label="Our promise"><li><span aria-hidden="true">✓</span> Always free</li><li><span aria-hidden="true">✓</span> No ads, ever</li><li><span aria-hidden="true">✓</span> No accounts needed</li><li><span aria-hidden="true">✓</span> Just good, simple fun</li></ul></div>
+    <section id="games" class="games-section container" aria-labelledby="games-title">
+      <div class="section-heading"><div><p class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</p><h2 id="games-title">What shall we play?</h2></div><p>Pick a world. Jump right in.<br><span>All six games play in your browser.</span></p></div>
+      <div class="games-grid">
+        <a class="game-card" href="/find-the-animal/" aria-labelledby="animal-title" aria-describedby="animal-description">
+          <div class="game-image"><img src="images/art/animals.svg" width="600" height="360" alt="" loading="lazy"><span class="genre">Look &amp; find</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+          <div class="game-copy"><h3 id="animal-title">Find the Animal</h3><p id="animal-description">A crowd of cute creatures. Can you spot the right one?</p><div class="game-bottom"><span class="control-label">Mouse &amp; touch</span><span class="play-label">Let’s play <span aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="game-card" href="/alien/" aria-labelledby="alien-title" aria-describedby="alien-description">
+          <div class="game-image"><img src="images/art/alien.svg" width="600" height="360" alt="" loading="lazy"><span class="genre">Explore &amp; discover</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+          <div class="game-copy"><h3 id="alien-title">Alien Explorer</h3><p id="alien-description">Scan a colorful planet and find your hidden alien friend.</p><div class="game-bottom"><span class="control-label">Mouse &amp; touch</span><span class="play-label">Let’s play <span aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="game-card" href="/dune-arcanum/" aria-labelledby="dune-title" aria-describedby="dune-description">
+          <div class="game-image"><img src="images/art/dune.svg" width="600" height="360" alt="" loading="lazy"><span class="genre">Aim &amp; bounce</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+          <div class="game-copy"><h3 id="dune-title">Dune Arcanum</h3><p id="dune-description">Find your angle and break beautiful tiles in a desert world.</p><div class="game-bottom"><span class="control-label">Mouse &amp; touch</span><span class="play-label">Let’s play <span aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="game-card" href="/photon/" aria-labelledby="photon-title" aria-describedby="photon-description">
+          <div class="game-image"><img src="images/art/photon.svg" width="600" height="360" alt="" loading="lazy"><span class="genre">Aim &amp; bounce</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+          <div class="game-copy"><h3 id="photon-title">Photon Breaker</h3><p id="photon-description">Light up the board. Bounce photons and break through blocks.</p><div class="game-bottom"><span class="control-label">Mouse &amp; touch</span><span class="play-label">Let’s play <span aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="game-card" href="/swipe/" aria-labelledby="swipe-title" aria-describedby="swipe-description">
+          <div class="game-image"><img src="images/art/swipe.svg" width="600" height="360" alt="" loading="lazy"><span class="genre">Quick reflexes</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+          <div class="game-copy"><h3 id="swipe-title">Swipe Slice</h3><p id="swipe-description">Ready, steady, swipe! Slice flying shapes and chase a high score.</p><div class="game-bottom"><span class="control-label">Mouse &amp; touch</span><span class="play-label">Let’s play <span aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="game-card" href="/pearls/" aria-labelledby="pearls-title" aria-describedby="pearls-description">
+          <div class="game-image"><img src="images/art/pearls.svg" width="600" height="360" alt="" loading="lazy"><span class="genre">Sail &amp; collect</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+          <div class="game-copy"><h3 id="pearls-title">Pearls of the Gulf</h3><p id="pearls-description">Set sail, gather treasure, and steer clear of mischievous mines.</p><div class="game-bottom"><span class="control-label">Keyboard · arrow keys</span><span class="play-label">Let’s play <span aria-hidden="true">→</span></span></div></div>
+        </a>
+      </div>
+      <p class="games-note"><span aria-hidden="true">✧</span> A few spare minutes. A whole lot of possibility.</p>
+    </section>
+    <section id="about" class="about-section container" aria-labelledby="about-title">
+      <div class="about-illustration" aria-hidden="true"><img src="images/art/brand.svg" width="98" height="98" alt=""><span class="about-star">✦</span></div>
+      <div class="about-copy"><p class="eyebrow">FROM OUR FAMILY TO YOURS</p><h2 id="about-title">Good fun. A little heart.</h2><p>Ummah Games started with a simple idea: make little games for our children, and share the joy with everyone. A place to be curious, try again, and have a little fun together.</p><p>No ads to interrupt. No account to create. Just pick a game and make yourself at home.</p></div>
+      <a class="about-link" href="https://github.com/ummahgames" target="_blank" rel="noopener noreferrer">Made with love.<br><span>Built in the open ↗</span><span class="sr-only"> (GitHub, opens in a new tab)</span></a>
+    </section>
+  </main>
+  <footer class="container site-footer"><a class="brand footer-brand" href="#home"><img src="images/art/brand.svg" width="30" height="30" alt=""><span>ummah<span class="brand-light">games</span><span class="brand-dot">.</span></span></a><p>A little play makes a brighter day.</p><a href="#games">Back to the games <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>
