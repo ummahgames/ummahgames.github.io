@@ -1,205 +1,44 @@
-# Ummah Games - Islamic Themed Arcade
+# Ummah Games
 
-A beautiful, client-side only gaming website featuring classic arcade games with Islamic themes and motifs. Built with modern web technologies and designed to run on any LAMP server without requiring server-side code.
+A welcoming, static landing page for six free browser games at [ummahgames.com](https://ummahgames.com/). Built with HTML, CSS, and a small optional JavaScript enhancement. No build step or package installation is needed.
 
-## 🌟 Features
+## Games and routes
 
-### Games Available
-- **Islamic Snake Game** - Navigate through beautiful geometric patterns
-- **Islamic Tetris** - Build patterns with Islamic geometric shapes
-- **Memory Match** - Match Islamic calligraphy and symbols
-- **Islamic Puzzle** - Solve puzzles featuring Islamic architecture
+| Game | Link | Controls |
+| --- | --- | --- |
+| Find the Animal | `/find-the-animal/` | Mouse or touch |
+| Alien Explorer | `/alien/` | Mouse or touch |
+| Dune Arcanum | `/dune-arcanum/` | Mouse or touch |
+| Photon Breaker | `/photon/` | Mouse or touch |
+| Swipe Slice | `/swipe/` | Mouse or touch |
+| Pearls of the Gulf | `/pearls/` | Keyboard arrow keys |
 
-### Website Features
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- **Islamic Theming** - Beautiful colors, fonts, and geometric patterns
-- **Interactive Navigation** - Smooth scrolling and active state management
-- **Game Modals** - Play games directly on the website
-- **Game Details** - Learn more about each game before playing
-- **Donation System** - Support the project (simulated for demo)
+Each card is a standard link to the game’s folder on the same domain. The game links and section navigation work without JavaScript. JavaScript only enhances “Surprise me” to choose a random game.
 
-## 🚀 Getting Started
+## Local preview
 
-### Prerequisites
-- A web server (Apache, Nginx, or any LAMP stack)
-- Modern web browser with JavaScript enabled
+The workspace contains the landing repository and six sibling game repositories. To preview that structure with the same paths used in production, run from this repository:
 
-### Installation
-1. Clone or download this repository
-2. Upload all files to your web server's document root
-3. Access the website through your browser
-
-### File Structure
-```
-ummahgames.github.io/
-├── index.html          # Main website page
-├── styles.css          # All styling and animations
-├── script.js           # Game logic and interactivity
-├── README.md           # This file
-└── images/             # Game images (optional)
+```sh
+python3 scripts/preview.py
 ```
 
-## 🎮 How to Play
+Open `http://127.0.0.1:8000/`. The helper serves the landing page at `/` and each sibling game at its folder path. Stop it with Ctrl+C.
 
-### Snake Game
-- Use arrow keys to control the snake
-- Collect golden crescents to grow and earn points
-- Avoid hitting walls or yourself
-- Score increases with each food collected
+To preview only the landing page, use `python3 -m http.server 8000` from this repository. Game links require the sibling repositories or an equivalent hosting setup; they do not resolve in a landing-only server.
 
-### Tetris Game
-- Use arrow keys to move and rotate pieces
-- Left/Right: Move pieces horizontally
-- Down: Move pieces down faster
-- Up: Rotate pieces
-- Clear complete rows to earn points
+## Production hosting
 
-### Memory Match
-- Click on cards to reveal them
-- Find matching pairs to clear the board
-- Complete the game with the fewest moves
-- Features Islamic symbols and calligraphy
+The existing `CNAME` is `ummahgames.com`. Keep the landing repository at the domain root and publish each game at its matching folder path. On GitHub Pages, that means enabling Pages for each corresponding game repository in the same account. Alternatively, a static web host can serve the landing files at the root alongside the six game directories.
 
-### Puzzle Game
-- Click on pieces adjacent to the empty space to move them
-- Arrange pieces to complete the puzzle
-- Use the shuffle button to start a new puzzle
-- Features beautiful Islamic color schemes
+Changes to this checkout do not publish automatically until pushed to the existing hosting workflow. Game source files are maintained in their own repositories.
 
-## 🎨 Design Features
+## Design and accessibility
 
-### Islamic Theming
-- **Color Palette**: Deep blues, golden yellows, and beautiful gradients
-- **Typography**: Arabic-friendly fonts (Amiri, Scheherazade New)
-- **Geometric Patterns**: Islamic-inspired background patterns
-- **Cultural Elements**: Arabic text, Islamic symbols, and motifs
+- Cream, teal, and terracotta palette with responsive one-, two-, and three-column layouts.
+- Original local SVG logo, oasis illustration, and artwork for all six game cards in `images/art/`.
+- Keyboard focus outlines, a skip link, semantic headings, descriptive link names, and reduced-motion support.
+- Google Fonts supplies Nunito Sans, with local system fonts as a fallback.
+- Game suggestions and contributions are welcome at [MSSHAMIM@PM.me](mailto:MSSHAMIM@PM.me).
 
-### Responsive Design
-- **Mobile First**: Optimized for all screen sizes
-- **Touch Friendly**: Works perfectly on touch devices
-- **Fast Loading**: Optimized CSS and JavaScript
-- **Accessibility**: High contrast and readable text
-
-## 🔧 Technical Details
-
-### Technologies Used
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)**: Game logic and interactivity
-- **Canvas API**: For game rendering
-- **CSS Animations**: Smooth transitions and effects
-
-### Browser Support
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-### Performance Features
-- **Client-side Only**: No server requests needed
-- **Optimized Rendering**: Efficient game loops
-- **Memory Management**: Proper cleanup of game instances
-- **Responsive Images**: Fallback placeholders for missing images
-
-## 🌐 Deployment
-
-### LAMP Server
-This website is designed to work perfectly on LAMP servers:
-- **Linux**: Any modern Linux distribution
-- **Apache**: Standard web server configuration
-- **MySQL**: Not required (client-side only)
-- **PHP**: Not required (client-side only)
-
-### Static Hosting
-Perfect for static hosting services:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3
-- Any CDN
-
-### Local Development
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Or use a local server: `python -m http.server 8000`
-
-## 🎯 Future Enhancements
-
-### Planned Features
-- **More Games**: Additional Islamic-themed games
-- **Leaderboards**: Score tracking and competition
-- **Multiplayer**: Real-time multiplayer games
-- **Progressive Web App**: Offline functionality
-- **Localization**: Multiple language support
-
-### Game Improvements
-- **Sound Effects**: Islamic-inspired audio
-- **Animations**: More sophisticated visual effects
-- **Difficulty Levels**: Adjustable game complexity
-- **Achievements**: Unlockable content and rewards
-
-## 🤝 Contributing
-
-We welcome contributions to improve the games and website:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your improvements
-4. Test thoroughly
-5. Submit a pull request
-
-### Areas for Contribution
-- **Game Development**: New games or improvements to existing ones
-- **UI/UX Design**: Better user experience and visual design
-- **Performance**: Optimizations and better game mechanics
-- **Content**: More Islamic themes and educational content
-
-## 📱 Mobile Experience
-
-The website is fully optimized for mobile devices:
-- **Touch Controls**: All games work with touch input
-- **Responsive Layout**: Adapts to any screen size
-- **Mobile Navigation**: Hamburger menu for small screens
-- **Touch-Friendly Buttons**: Proper sizing for mobile interaction
-
-## 🎨 Customization
-
-### Colors
-The color scheme can be easily customized in `styles.css`:
-```css
-:root {
-    --primary-color: #1e3c72;
-    --secondary-color: #ffd700;
-    --accent-color: #667eea;
-}
-```
-
-### Games
-Add new games by:
-1. Adding game data to the `games` object in `script.js`
-2. Creating the game function
-3. Adding the game card to the HTML
-4. Updating the `playGame` function
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Islamic art and geometric patterns for inspiration
-- Arabic typography and calligraphy
-- Classic arcade games that inspired our versions
-- The open source community for tools and libraries
-
-## 📞 Contact
-
-- **Website**: [Ummah Games](https://ummahgames.com)
-- **Email**: info@ummahgames.com
-- **GitHub**: [Repository Issues](https://github.com/ummahgames/ummahgames.github.io/issues)
-
----
-
-**Made with ❤️ for the Ummah**
-
-*Bringing Islamic culture to life through gaming*
+Edit `index.html` for content, `styles.css` for presentation, and `script.js` for the optional random-game link. Earlier raster artwork is retained but is no longer used by the landing page.
