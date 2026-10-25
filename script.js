@@ -1,10 +1,10 @@
-// Every game remains an ordinary link, even with JavaScript disabled.
-// Give the optional "Surprise me" link a fresh destination on activation.
-const gameLinks = Array.from(document.querySelectorAll('.game-card'), card => card.getAttribute('href'));
-const surpriseLink = document.getElementById('surprise-link');
-
-if (surpriseLink && gameLinks.length) {
-  surpriseLink.addEventListener('click', () => {
-    surpriseLink.href = gameLinks[Math.floor(Math.random() * gameLinks.length)];
-  });
-}
+// Every game remains an ordinary link when scripting is unavailable.
+(function(){
+  'use strict';
+  const cards=[...document.querySelectorAll('.game-card')],meta=window.UmmahGameMeta||{},form=document.getElementById('game-filters'),surprise=document.getElementById('surprise-link');
+  const fields=Object.fromEntries(['search','age','kind','reading','players','levels'].map(k=>[k,document.getElementById('game-'+k)]));
+  for(const card of cards){const slug=card.getAttribute('href').split('/').filter(Boolean).pop(),m=meta[slug];if(!m)continue;Object.assign(card.dataset,m);const badge=document.createElement('span');badge.className='game-guidance';badge.textContent=({little:'About 2–5',young:'About 5–8',older:'About 8+'})[m.age]+' · '+(m.reading==='low'?'Mostly pictures':'Some reading')+(m.players==='shared'?' · Share a screen':'')+(m.levels==='numbered'?' · Generated levels':' · Generated free play');card.querySelector('.game-copy').append(badge);}
+  function filter(){const query=fields.search.value.trim().toLowerCase();let count=0;for(const card of cards){const visible=(!query||card.textContent.toLowerCase().includes(query))&&['age','kind','reading','players','levels'].every(k=>!fields[k].value||card.dataset[k]===fields[k].value);card.hidden=!visible;if(visible)count++;}document.getElementById('game-count').textContent=count+' '+(count===1?'game':'games')+' to explore. Age ranges are a guide.';document.getElementById('game-empty').hidden=count!==0;if(surprise){surprise.setAttribute('aria-disabled',String(count===0));const first=cards.find(c=>!c.hidden);if(first)surprise.href=first.getAttribute('href');}}
+  if(form){form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter();}
+  if(surprise)surprise.addEventListener('click',event=>{const available=cards.filter(c=>!c.hidden);if(!available.length){event.preventDefault();return;}surprise.href=available[Math.floor(Math.random()*available.length)].getAttribute('href');});
+}());

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Little Delivery Wagon</title><desc id="desc">A red wagon full of friendly parcels rolls through a sunny neighborhood.</desc>
+  <rect width="600" height="360" fill="#b8e1e2"/><circle cx="504" cy="66" r="42" fill="#f4c85b"/><circle cx="504" cy="66" r="57" fill="none" stroke="#f4c85b" stroke-opacity=".25" stroke-width="14"/>
+  <path d="M0 205Q112 129 242 215T600 190V360H0Z" fill="#8eb46d"/><path d="M0 251Q130 181 302 245T600 223V360H0Z" fill="#719a62"/>
+  <g transform="translate(55 135)"><path d="M0 58L54 10l54 48v88H0Z" fill="#de796b"/><path d="M-9 59L54 0l63 59" fill="none" stroke="#694c40" stroke-width="14" stroke-linejoin="round"/><rect x="40" y="90" width="28" height="56" rx="4" fill="#725243"/><rect x="10" y="68" width="25" height="29" fill="#b5e0e0" stroke="#fff2d6" stroke-width="5"/><rect x="76" y="68" width="25" height="29" fill="#b5e0e0" stroke="#fff2d6" stroke-width="5"/></g>
+  <g transform="translate(442 158) scale(.75)"><path d="M0 58L54 10l54 48v88H0Z" fill="#688fb4"/><path d="M-9 59L54 0l63 59" fill="none" stroke="#694c40" stroke-width="14" stroke-linejoin="round"/><rect x="40" y="90" width="28" height="56" rx="4" fill="#725243"/></g>
+  <path d="M0 300H600V360H0Z" fill="#72817b"/><path d="M18 328h70m55 0h70m55 0h70m55 0h70m55 0h70" stroke="#f5edc9" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(193 213) rotate(-2)"><path d="M0 25h216l-18 90c-3 14-14 22-28 22H48c-15 0-25-8-29-22Z" fill="#d65f4b"/><path d="M205 37l82-36" stroke="#284840" stroke-width="10" stroke-linecap="round"/><circle cx="293" cy="-2" r="14" fill="none" stroke="#284840" stroke-width="9"/><circle cx="55" cy="142" r="29" fill="#284840" stroke="#f1dda3" stroke-width="10"/><circle cx="162" cy="142" r="29" fill="#284840" stroke="#f1dda3" stroke-width="10"/>
+    <g transform="translate(25 -25)"><rect width="54" height="62" rx="8" fill="#f2b85a"/><path d="M27 0v62M0 27h54" stroke="#fff2c7" stroke-width="7"/><text x="27" y="49" text-anchor="middle" font-size="23">🥖</text></g>
+    <g transform="translate(86 -34)"><rect width="54" height="72" rx="8" fill="#8db77c"/><path d="M27 0v72M0 29h54" stroke="#eaf2cf" stroke-width="7"/><text x="27" y="55" text-anchor="middle" font-size="25">🌱</text></g>
+    <g transform="translate(147 -20)"><rect width="54" height="58" rx="8" fill="#7f98ca"/><path d="M27 0v58M0 25h54" stroke="#eff0cd" stroke-width="7"/><text x="27" y="46" text-anchor="middle" font-size="23">📚</text></g>
+  </g>
+  <g fill="#fff" opacity=".8"><ellipse cx="131" cy="65" rx="53" ry="16"/><circle cx="110" cy="53" r="22"/><circle cx="145" cy="48" r="28"/><ellipse cx="320" cy="74" rx="43" ry="13"/><circle cx="304" cy="63" r="18"/><circle cx="333" cy="60" r="22"/></g>
+</svg>
