@@ -4,35 +4,35 @@ A welcoming, static landing page for 57 free browser games at [ummahgames.com](h
 
 ## Games and routes
 
-The [workspace category index](../README.md) lists the five broad game types. The complete [game library](../GAME_LIBRARY.md) lists all 51 idea games, each with eight levels and its own rules. The six original games are also retained. The earlier routes below remain available; the library includes the 34 newly added games, including Stardust Sanctuary.
+The [workspace category index](../README.md) lists the five broad game types. The complete [game library](../GAME_LIBRARY.md) lists all 51 idea games, each with eight levels and its own rules. The six original games are also retained. All game links use absolute https://ummahgames.com/category/game/ URLs, including Stardust Sanctuary at /creative/stardust-sanctuary/.
 
 | Game | Link | Controls |
 | --- | --- | --- |
-| Little Delivery Wagon | `/little-delivery-wagon/` | Mouse, touch, or keyboard |
-| Sleepy Creature Hotel | `/sleepy-creature-hotel/` | Mouse, touch, or keyboard |
-| Puddle Engineers | `/puddle-engineers/` | Mouse, touch, or keyboard |
-| Sandcastle Helpers | `/sandcastle-helpers/` | Mouse, touch, or keyboard |
-| Picnic Pairs | `/picnic-pairs/` | Mouse, touch, or keyboard |
-| Cloud Shepherd | `/cloud-shepherd/` | Mouse, touch, or keyboard |
-| Mosaic Courtyard | `/mosaic-courtyard/` | Mouse, touch, or keyboard |
-| Carpet Unroll | `/carpet-unroll/` | Mouse, touch, or keyboard |
-| Bookworm Caravan | `/bookworm-caravan/` | Mouse, touch, or keyboard |
-| Button Burrows | `/button-burrows/` | Mouse, touch, or keyboard |
-| Folded Worlds | `/folded-worlds/` | Mouse, touch, or keyboard |
-| Orchard Guardians | `/orchard-guardians/` | Mouse, touch, or keyboard |
-| Caravan Breakthrough | `/caravan-breakthrough/` | Mouse, touch, or keyboard |
-| Clockwork Champions | `/clockwork-champions/` | Mouse, touch, or keyboard |
-| The Borrowed Minute | `/the-borrowed-minute/` | Mouse, touch, or keyboard |
-| Shadow Architects | `/shadow-architects/` | Mouse, touch, or keyboard |
-| Bridgewrights | `/bridgewrights/` | Mouse, touch, or keyboard |
-| Find the Animal | `/find-the-animal/` | Mouse or touch |
-| Alien Explorer | `/alien/` | Mouse or touch |
-| Dune Arcanum | `/dune-arcanum/` | Mouse or touch |
-| Photon Breaker | `/photon/` | Mouse or touch |
-| Swipe Slice | `/swipe/` | Mouse or touch |
-| Pearls of the Gulf | `/pearls/` | Keyboard arrow keys |
+| Little Delivery Wagon | `/matching/little-delivery-wagon/` | Mouse, touch, or keyboard |
+| Sleepy Creature Hotel | `/matching/sleepy-creature-hotel/` | Mouse, touch, or keyboard |
+| Puddle Engineers | `/puzzles/puddle-engineers/` | Mouse, touch, or keyboard |
+| Sandcastle Helpers | `/puzzles/sandcastle-helpers/` | Mouse, touch, or keyboard |
+| Picnic Pairs | `/matching/picnic-pairs/` | Mouse, touch, or keyboard |
+| Cloud Shepherd | `/puzzles/cloud-shepherd/` | Mouse, touch, or keyboard |
+| Mosaic Courtyard | `/puzzles/mosaic-courtyard/` | Mouse, touch, or keyboard |
+| Carpet Unroll | `/puzzles/carpet-unroll/` | Mouse, touch, or keyboard |
+| Bookworm Caravan | `/puzzles/bookworm-caravan/` | Mouse, touch, or keyboard |
+| Button Burrows | `/puzzles/button-burrows/` | Mouse, touch, or keyboard |
+| Folded Worlds | `/puzzles/folded-worlds/` | Mouse, touch, or keyboard |
+| Orchard Guardians | `/strategy/orchard-guardians/` | Mouse, touch, or keyboard |
+| Caravan Breakthrough | `/strategy/caravan-breakthrough/` | Mouse, touch, or keyboard |
+| Clockwork Champions | `/strategy/clockwork-champions/` | Mouse, touch, or keyboard |
+| The Borrowed Minute | `/puzzles/the-borrowed-minute/` | Mouse, touch, or keyboard |
+| Shadow Architects | `/puzzles/shadow-architects/` | Mouse, touch, or keyboard |
+| Bridgewrights | `/puzzles/bridgewrights/` | Mouse, touch, or keyboard |
+| Find the Animal | `/matching/find-the-animal/` | Mouse or touch |
+| Alien Explorer | `/puzzles/alien/` | Mouse or touch |
+| Dune Arcanum | `/puzzles/dune-arcanum/` | Mouse or touch |
+| Photon Breaker | `/puzzles/photon/` | Mouse or touch |
+| Swipe Slice | `/action/swipe/` | Mouse or touch |
+| Pearls of the Gulf | `/action/pearls/` | Keyboard arrow keys |
 
-Each card is a standard link to the game’s folder on the same domain. The game links and section navigation work without JavaScript. JavaScript adds search, age/type/reading/player/level filters, and a random game chosen from the filtered results.
+Each card uses an absolute https://ummahgames.com/category/game/ URL so it reaches the game even when the landing page is hosted on a different server. The game links and section navigation work without JavaScript. JavaScript adds search, age/type/reading/player/level filters, and a random game chosen from the filtered results.
 
 All 57 linked games include full-screen controls and layouts for computers, tablets, and phones. The icon in each game's header enters fullscreen, with an exit control available during play. Browsers that do not permit native fullscreen use an expanded page view and retain their browser bars. The landing page explains these controls and includes Pearls' touch-joystick support.
 
@@ -44,13 +44,13 @@ The workspace contains the landing repository and 57 game directories inside mat
 python3 scripts/preview.py
 ```
 
-Open `http://127.0.0.1:8000/`. The helper serves the landing page at `/` and each categorized game at its existing public slug route, for example /orchard-guardians/ maps to strategy/orchard-guardians/. Stop it with Ctrl+C.
+Open `http://127.0.0.1:8000/`. The helper serves the landing page at `/` and each game at its categorized public route, for example /strategy/orchard-guardians/ maps to strategy/orchard-guardians/. Legacy flat paths are also accepted by the local preview. Stop it with Ctrl+C.
 
 To preview only the landing page, use `python3 -m http.server 8000` from this repository. Game links require the categorized source folders or an equivalent hosting setup; they do not resolve in a landing-only server.
 
 ## Production hosting
 
-The existing `CNAME` is `ummahgames.com`. Keep the landing repository at the domain root and publish each game at its matching folder path. On GitHub Pages, that means enabling Pages for each corresponding game repository in the same account. Alternatively, a combined static deployment can serve the landing files at the root and copy each game from its category folder to the matching public slug folder. Source categories are an organizational structure; public URLs remain unchanged.
+The existing `CNAME` is `ummahgames.com`. Keep the landing repository at the domain root and publish the five category repositories at /matching/, /puzzles/, /strategy/, /creative/, and /action/. On GitHub Pages, enable Pages for each category repository in the same account. Each game is served from a subfolder within its category, such as https://ummahgames.com/puzzles/alien/. A combined static deployment should preserve this same category/game directory structure.
 
 Changes to this checkout do not publish automatically until pushed to the existing hosting workflow. The six original game repositories retain their Git metadata inside the category folders; the toolkit games are distributed from the shared source. The source-folder move does not rename remote repositories or publish changes.
 
