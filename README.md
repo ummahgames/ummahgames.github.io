@@ -1,6 +1,6 @@
 # Ummah Games
 
-A welcoming, static landing page for 57 free browser games at [ummahgames.com](https://ummahgames.com/). Built with HTML, CSS, and a small optional JavaScript enhancement. No build step or package installation is needed.
+A welcoming, static landing page for 56 free browser games at [ummahgames.com](https://ummahgames.com/). Built with HTML, CSS, and a small optional JavaScript enhancement. No build step or package installation is needed.
 
 ## Games and routes
 
@@ -11,13 +11,11 @@ The [workspace category index](../README.md) lists the five broad game types. Th
 | Little Delivery Wagon | `/matching/little-delivery-wagon/` | Mouse, touch, or keyboard |
 | Sleepy Creature Hotel | `/matching/sleepy-creature-hotel/` | Mouse, touch, or keyboard |
 | Puddle Engineers | `/puzzles/puddle-engineers/` | Mouse, touch, or keyboard |
-| Sandcastle Helpers | `/puzzles/sandcastle-helpers/` | Mouse, touch, or keyboard |
 | Picnic Pairs | `/matching/picnic-pairs/` | Mouse, touch, or keyboard |
 | Cloud Shepherd | `/puzzles/cloud-shepherd/` | Mouse, touch, or keyboard |
 | Mosaic Courtyard | `/puzzles/mosaic-courtyard/` | Mouse, touch, or keyboard |
 | Carpet Unroll | `/puzzles/carpet-unroll/` | Mouse, touch, or keyboard |
 | Bookworm Caravan | `/puzzles/bookworm-caravan/` | Mouse, touch, or keyboard |
-| Button Burrows | `/puzzles/button-burrows/` | Mouse, touch, or keyboard |
 | Folded Worlds | `/puzzles/folded-worlds/` | Mouse, touch, or keyboard |
 | Orchard Guardians | `/strategy/orchard-guardians/` | Mouse, touch, or keyboard |
 | Caravan Breakthrough | `/strategy/caravan-breakthrough/` | Mouse, touch, or keyboard |
@@ -34,11 +32,11 @@ The [workspace category index](../README.md) lists the five broad game types. Th
 
 Each card uses an absolute https://ummahgames.com/category/game/ URL so it reaches the game even when the landing page is hosted on a different server. The game links and section navigation work without JavaScript. JavaScript adds search, age/type/reading/player/level filters, and a random game chosen from the filtered results.
 
-All 57 linked games include full-screen controls and layouts for computers, tablets, and phones. The icon in each game's header enters fullscreen, with an exit control available during play. Browsers that do not permit native fullscreen use an expanded page view and retain their browser bars. The landing page explains these controls and includes Pearls' touch-joystick support.
+All 56 linked games include full-screen controls and layouts for computers, tablets, and phones. The icon in each game's header enters fullscreen, with an exit control available during play. Browsers that do not permit native fullscreen use an expanded page view and retain their browser bars. The landing page explains these controls and includes Pearls' touch-joystick support.
 
 ## Local preview
 
-The workspace contains the landing repository and 57 game directories inside matching/, puzzles/, strategy/, creative/, and action/. To preview that structure with the same paths used in production, run from this repository:
+The workspace contains the landing repository and 56 game directories inside matching/, puzzles/, strategy/, creative/, and action/. To preview that structure with the same paths used in production, run from this repository:
 
 ```sh
 python3 scripts/preview.py
@@ -57,7 +55,7 @@ Changes to this checkout do not publish automatically until pushed to the existi
 ## Design and accessibility
 
 - Cream, teal, and terracotta palette with responsive one-, two-, and three-column layouts.
-- Original local SVG logo, oasis illustration, and artwork for all 57 game cards in `images/art/`.
+- Original local SVG logo, oasis illustration, and artwork for all 56 game cards in `images/art/`.
 - Keyboard focus outlines, a skip link, semantic headings, descriptive link names, and reduced-motion support.
 - Local system fonts provide rounded typography without external font requests.
 - Game suggestions and contributions are welcome at [MSSHAMIM@PM.me](mailto:MSSHAMIM@PM.me).
