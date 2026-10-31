@@ -1,13 +1,14 @@
 # Ummah Games
 
-A welcoming, static landing page for 56 free browser games at [ummahgames.com](https://ummahgames.com/). Built with HTML, CSS, and a small optional JavaScript enhancement. No build step or package installation is needed.
+A welcoming, static landing page featuring 13 free browser games at [ummahgames.com](https://ummahgames.com/). Built with HTML, CSS, and a small optional JavaScript enhancement. No build step or package installation is needed.
 
 ## Games and routes
 
-The [workspace category index](../README.md) lists the five broad game types. The complete [game library](../GAME_LIBRARY.md) lists all 51 idea games, each with eight levels and its own rules. The six original games are also retained. All game links use absolute https://ummahgames.com/category/game/ URLs, including Stardust Sanctuary at /creative/stardust-sanctuary/.
+The [workspace category index](../README.md) lists the five broad game types. The complete [game library](../GAME_LIBRARY.md) lists all 51 idea games, each with eight levels and its own rules. The six original games are also retained. Crescent Seas is a standalone naval adventure at `/crescent-seas/`. Other game links use absolute https://ummahgames.com/category/game/ URLs, including Stardust Sanctuary at /creative/stardust-sanctuary/.
 
 | Game | Link | Controls |
 | --- | --- | --- |
+| Crescent Seas | `/crescent-seas/` | Mouse, touch, or keyboard |
 | Little Delivery Wagon | `/matching/little-delivery-wagon/` | Mouse, touch, or keyboard |
 | Sleepy Creature Hotel | `/matching/sleepy-creature-hotel/` | Mouse, touch, or keyboard |
 | Puddle Engineers | `/puzzles/puddle-engineers/` | Mouse, touch, or keyboard |
@@ -63,3 +64,7 @@ Changes to this checkout do not publish automatically until pushed to the existi
 Edit `index.html` for content, `styles.css` for presentation, and `script.js` for search, filters, and the random-game link. Editorial age, reading, play-style, and shared-play guidance comes from `../game-kit/discovery.cjs`, distributed as `game-meta.js`. Age ranges are guidance rather than assessed suitability. Earlier raster artwork is retained but is no longer used by the landing page.
 
 The 49 toolkit game cards are generated between the MINI-GAMES comment markers from `../game-kit/catalog.js`. Change their canonical source there and run `node ../game-kit/build.cjs`; the other cards and landing content are preserved.
+
+## Temporarily hidden games
+
+See [HIDDEN_GAMES.md](HIDDEN_GAMES.md) for the 41 games hidden from the landing page pending testing. Game files and direct URLs remain available. The build respects [hidden-games.json](hidden-games.json).
