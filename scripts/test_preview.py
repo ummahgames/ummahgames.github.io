@@ -10,12 +10,12 @@ class PreviewRoutes(unittest.TestCase):
         self.assertTrue(resolve_route('/game-meta.js').is_file())
 
     def test_all_public_game_urls_and_assets(self):
-        self.assertEqual(len(games), 53)
+        self.assertEqual(len(games), 55)
         for slug, folder in games.items():
             with self.subTest(slug=slug):
                 self.assertEqual(resolve_route(f'/{slug}/'), folder)
                 self.assertEqual(resolve_route(f'/{slug}/index.html?level=1#save=keep-me'), folder / 'index.html')
-                self.assertTrue(resolve_route(f'/{slug}/screen.js').is_file())
+                self.assertTrue(resolve_route(f'/{slug}/' + ('app.js' if slug == 'starhaven' else 'screen.js')).is_file())
 
     def test_all_categorized_game_urls(self):
         for slug, folder in games.items():
